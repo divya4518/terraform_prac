@@ -12,8 +12,8 @@ provider "aws" {
 }
 
 resource "aws_instance" "web" {
-  ami           = "ami-0a734ede9890e57f5"
-  instance_type = "t3.micro"
+  ami           = var.ami_id
+  instance_type = var.instance_type
   tags = {
     Name = "tf-cloud-inst-auto-apply"
   }
